@@ -95,14 +95,23 @@ with st.sidebar:
     )
 
     if st.button("Hiện mã QR Donate"):
-        st.toast(f"Cảm ơn bạn đã chọn mức {muc_donate}! 💖")
+        # KIỂM TRA ĐIỀU KIỆN: Nếu chọn Tùy tâm
+        if muc_donate == "Tùy tâm":
+            st.toast("Mọi sự ủng hộ từ bạn đều là động lực lớn cho Phúc! ❤️")
+            loi_nhan = "Phúc cảm ơn tấm lòng tùy tâm của bạn rất nhiều!"
+        else:
+            st.toast(f"Cảm ơn bạn đã chọn mức {muc_donate}! 💖")
+            loi_nhan = f"Vui lòng nhập đúng {muc_donate} khi quét mã ZaloPay/Ngân hàng"
         
         # Hiển thị ảnh QR từ link GitHub của bạn
         st.image(
             "https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg",
-            caption=f"Vui lòng nhập đúng {muc_donate} khi quét mã ZaloPay/Ngân hàng",
+            caption=loi_nhan,
             use_container_width=True
         )
+        
+        st.info(f"Nội dung chuyển khoản: **PhucKing {muc_donate}**")
+
 
 # 3. TIÊU ĐỀ & SIDEBAR 
 st.title("🔢 Ứng dụng Chuyển đổi Hệ số")
@@ -110,24 +119,6 @@ st.sidebar.title("👑 Thương Hiệu")
 st.sidebar.subheader("PhucKing® System")
 st.sidebar.write("Chủ sở hữu: **Hoàng Phúc**")
 st.sidebar.info("Phiên bản độc quyền 2026")
-
-# Nút Donate
-with st.sidebar:
-    st.divider()
-    st.markdown("### ☕ Ủng hộ PhucKing®")
-    
-    # Nút bấm để hiện mã QR
-    if st.button("Mời tác giả ly cà phê"):
-        st.info("Cảm ơn bạn đã ủng hộ dự án!")
-        
-        # Link donate
-        link_qr = "https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg"
-        
-        st.image(link_qr, 
-                 caption="Quét mã để mời Hoàng Phúc ly cà phê nha",
-                 use_container_width=True)
-        
-        st.caption("Nội dung: [Ten cua ban] ung ho PhucKing")
 
 # 4. CHIA CÁC TAB
 tab1, tab2, tab3 = st.tabs(["➡️ Sang Nhị Phân", "⬅️ Sang Thập Phân", "🔠 Sang Chữ Cái"])
@@ -186,6 +177,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
