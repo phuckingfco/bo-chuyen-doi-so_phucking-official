@@ -1,6 +1,7 @@
 import streamlit as st
 
 # 1. CẤU HÌNH TRANG 
+st.set_page_config(
     page_title="PhucKing® - Bộ Chuyển Đổi Số", 
     page_icon="🔢",
     layout="centered"
@@ -10,6 +11,25 @@ import streamlit as st
 st.markdown(
     """
     <style>
+    /* 1. HIỆN Header để giữ Menu 3 gạch nhưng làm Header trong suốt */
+    header {
+        visibility: visible !important;
+        background-color: rgba(0,0,0,0) !important;
+    }
+
+    /* 2. ẨN TRIỆT ĐỂ dòng "Fork me on GitHub" và nút Deploy */
+    .viewerBadge_container__1QSob, 
+    .stDeployButton, 
+    [data-testid="stActionButtonIcon"] {
+        display: none !important;
+    }
+
+    /* 3. HIỆN Menu 3 gạch và ẩn các mục thừa bên trong */
+    #MainMenu {visibility: visible !important;}
+    
+    /* 4. ẨN Footer "Made with Streamlit" */
+    footer {visibility: hidden;
+    }
     /* Hiện lại Header để hiện tiêu đề khi gửi link */
     header {visibility: visible !important;}
     
@@ -156,6 +176,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
