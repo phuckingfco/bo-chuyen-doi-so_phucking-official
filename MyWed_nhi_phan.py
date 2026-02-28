@@ -103,8 +103,6 @@ with st.sidebar:
             caption=f"Vui lòng nhập đúng {muc_donate} khi quét mã ZaloPay/Ngân hàng",
             use_container_width=True
         )
-        
-        st.info(f"Nội dung chuyển khoản: **PhucKing {muc_donate}**")
 
 # 3. TIÊU ĐỀ & SIDEBAR 
 st.title("🔢 Ứng dụng Chuyển đổi Hệ số")
@@ -188,6 +186,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
