@@ -44,7 +44,12 @@ st.markdown(
         background-size: cover;
         background-attachment: fixed;
     }
-    
+    /* Nền App tối và hình nền chuyên nghiệp */
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                    url("https://img.freepik.com/free-vector/abstract-binary-code-techno-background_1048-12836.jpg");
+        background-size: cover;
+        background-attachment: fixed;
     }
      /* 2. Sửa lỗi Sidebar bị trắng: Ép Sidebar luôn có màu tối */
     [data-testid="stSidebar"] {
@@ -170,6 +175,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
