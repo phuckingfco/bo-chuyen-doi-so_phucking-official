@@ -26,6 +26,13 @@ st.markdown(
         background-size: cover;
         background-attachment: fixed;
     }
+       /* Nền App tối và hình nền chuyên nghiệp */
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                    url("https://img.freepik.com/free-vector/abstract-binary-code-techno-background_1048-12836.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
 
     /* Khung nội dung chính */
     .main .block-container {
@@ -134,6 +141,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
