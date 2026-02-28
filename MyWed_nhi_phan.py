@@ -33,6 +33,10 @@ st.markdown(
         background-size: cover;
         background-attachment: fixed;
     }
+     /* 2. Sửa lỗi Sidebar bị trắng: Ép Sidebar luôn có màu tối */
+    [data-testid="stSidebar"] {
+        background-color: #111111 !important;
+    }
 
     /* Khung nội dung chính */
     .main .block-container {
@@ -153,6 +157,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
