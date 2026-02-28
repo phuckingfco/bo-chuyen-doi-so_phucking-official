@@ -1,4 +1,11 @@
 import streamlit as st
+
+
+st.set_page_config(
+    page_title="Bộ Chuyển Đổi Số Official",
+    page_icon="logo.jpg",
+    layout="wide"
+)
 # 1. CẤU HÌNH TRANG 
 st.set_page_config(
     page_title="PhucKing® - Bộ Chuyển Đổi Số", 
@@ -452,6 +459,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
