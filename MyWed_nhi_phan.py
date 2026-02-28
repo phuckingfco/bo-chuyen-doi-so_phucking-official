@@ -1,8 +1,15 @@
 import streamlit as st
 
 # 1. CẤU HÌNH TRANG
-st.set_page_config(page_title="PhucKing® - Bộ Chuyển Đổi Số", page_icon="🔢")
-
+st.set_page_config(
+    page_title="PhucKing® - Bộ Chuyển Đổi Số", 
+    page_icon="🔢",
+    menu_items={
+        'Get Help': 'https://www.facebook.com/hoang.phuc.554411', # Link cá nhân
+        'Report a bug': None,
+        'About': "# 👑 PhucKing® Premium Edition\nBản quyền thuộc về Hoàng Phúc © 2026"
+    }
+)
 # 2. CSS TỔNG HỢP
 st.markdown(
     """
@@ -130,3 +137,4 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
