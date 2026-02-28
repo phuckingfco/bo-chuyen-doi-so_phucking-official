@@ -82,16 +82,29 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- THÔNG TIN ĐỂ HIỆN ẢNH XEM TRƯỚC KHI GỬI LINK ---
-st.markdown(
-    """
-    <head>
-        <meta property="og:title" content="PhucKing® - Bộ Chuyển Đổi Số Chính Thức">
-        <meta property="og:image" content="https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg">
-    </head>
-    """,
-    unsafe_allow_html=True
-)
+# --- HỆ THỐNG ỦNG HỘ PHUCKING® PREMIUM ---
+with st.sidebar:
+    st.divider()
+    st.markdown("### ☕ Ủng hộ dự án")
+    
+    # Cho người dùng chọn mức tiền gợi ý
+    muc_donate = st.radio(
+        "Chọn mức bạn muốn mời Phúc:",
+        ["5.000 VNĐ", "10.000 VNĐ", "20.000 VNĐ", "Tùy tâm"],
+        index=1
+    )
+
+    if st.button("Hiện mã QR Donate"):
+        st.toast(f"Cảm ơn bạn đã chọn mức {muc_donate}! 💖")
+        
+        # Hiển thị ảnh QR từ link GitHub của bạn
+        st.image(
+            "https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg",
+            caption=f"Vui lòng nhập đúng {muc_donate} khi quét mã ZaloPay/Ngân hàng",
+            use_container_width=True
+        )
+        
+        st.info(f"Nội dung chuyển khoản: **PhucKing {muc_donate}**")
 
 # 3. TIÊU ĐỀ & SIDEBAR 
 st.title("🔢 Ứng dụng Chuyển đổi Hệ số")
@@ -175,6 +188,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
