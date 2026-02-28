@@ -1,17 +1,13 @@
 import streamlit as st
 
-# 1. CẤU HÌNH TRANG
+# 1. CẤU HÌNH TRANG (Hiện Header để tạo uy tín)
 st.set_page_config(
     page_title="PhucKing® - Bộ Chuyển Đổi Số", 
     page_icon="🔢",
-    menu_items={
-        'Get Help': 'https://www.facebook.com/hoang.phuc.554411', # Link cá nhân
-        'Report a bug': None,
-        'About': "# 👑 PhucKing® Premium Edition\nBản quyền thuộc về Hoàng Phúc © 2026"
-    }
+    layout="centered"
 )
 
-# 2. CSS TỔNG HỢP
+# 2. CSS TỔNG HỢP (Hiện Header, ẩn những thứ thừa)
 st.markdown(
     """
     <style>
@@ -51,41 +47,6 @@ st.markdown(
         <meta property="og:title" content="PhucKing® - Bộ Chuyển Đổi Số Chính Thức">
         <meta property="og:image" content="https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg">
     </head>
-    """,
-    unsafe_allow_html=True
-)
-
-    /* Nền App tối và hình nền chuyên nghiệp */
-    .stApp {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                    url("https://img.freepik.com/free-vector/abstract-binary-code-techno-background_1048-12836.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    /* Khung nội dung chính */
-    .main .block-container {
-        background-color: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(10px);
-        padding: 40px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
-    }
-
-    /* Màu chữ và bóng đổ */
-    h1, h2, h3, p, span, label {
-        color: #FFFFFF !important;
-        text-shadow: 1px 1px 3px black;
-    }
-
-    /* Tùy chỉnh ô nhập liệu */
-    .stTextInput input {
-        background-color: rgba(255, 255, 255, 0.1) !important;
-        color: white !important;
-        border: 1px solid #4CAF50 !important;
-    }
-    </style>
     """,
     unsafe_allow_html=True
 )
@@ -172,6 +133,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
