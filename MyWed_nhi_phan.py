@@ -10,6 +10,38 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* 1. Chữ nhập vào: Đậm đặc, to và rõ */
+    .stTextInput input {
+        color: #004d00 !important; /* Xanh lá cực đậm (Deep Green) */
+        font-weight: 900 !important; 
+        font-size: 20px !important;
+        -webkit-text-fill-color: #004d00 !important;
+    }
+
+    /* 2. Khung viền: Dày và sắc sảo */
+    .stTextInput div[data-baseweb="input"] {
+        border: 3px solid #008000 !important; /* Viền xanh lá thuần */
+        background-color: rgba(0, 128, 0, 0.1) !important;
+        border-radius: 15px !important;
+        transition: 0.3s ease-in-out;
+    }
+
+    /* 3. Hiệu ứng khi click (Focus): Phát sáng để tăng uy tín */
+    .stTextInput div[data-baseweb="input"]:focus-within {
+        border: 3px solid #00ff00 !important;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.4) !important;
+        background-color: rgba(0, 128, 0, 0.15) !important;
+    }
+
+    /* 4. Đổi màu chữ gợi ý (Placeholder) cho đồng bộ */
+    .stTextInput input::placeholder {
+        color: rgba(0, 77, 0, 0.5) !important;
+    }
+
+    /* 5. Hiệu ứng khi di chuột qua (Hover) */
+    .stTextInput div[data-baseweb="input"]:hover {
+        border-color: #00ff00 !important;
+    }
     /* 1. Đổi màu chữ bạn NHẬP VÀO ô */
     .stTextInput input {
         color: #32cd32 !important; /* Màu xanh lá cây rực rỡ */
