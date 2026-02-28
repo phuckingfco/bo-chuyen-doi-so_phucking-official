@@ -1,16 +1,9 @@
 import streamlit as st
-
-
 st.set_page_config(
-    page_title="Bộ Chuyển Đổi Số Official",
+    page_title="PhucKing® - Bộ Chuyển Đổi Số",
     page_icon="logo.jpg",
-    layout="wide"
-)
-# 1. CẤU HÌNH TRANG 
-st.set_page_config(
-    page_title="PhucKing® - Bộ Chuyển Đổi Số", 
-    page_icon="🔢",
-    initial_sidebar_state="expanded" # Tự động nhảy vào Sidebar
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 # 2. CSS TỔNG HỢP 
 st.markdown(
@@ -459,6 +452,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
