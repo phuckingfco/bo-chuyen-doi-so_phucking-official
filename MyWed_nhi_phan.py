@@ -11,6 +11,21 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* HIỆN Header để giữ Menu 3 gạch và tạo uy tín */
+    header {visibility: visible !important;}
+    
+    /* ẨN dòng "Fork me on GitHub" và các nút xem code */
+    .viewerBadge_container__1QSob, .stDeployButton {display: none !important;}
+    
+    /* ẨN Footer mặc định nhưng GIỮ LẠI Menu 3 gạch (#MainMenu) */
+    footer {visibility: hidden;}
+    #MainMenu {visibility: visible !important;}
+
+    /* Làm sạch Menu: Ẩn bớt các dòng "Report a bug" hay "View source" bên trong menu 3 gạch */
+    ul[data-testid="main-menu-list"] li:nth-child(2), 
+    ul[data-testid="main-menu-list"] li:nth-child(3) {
+        display: none !important;
+    }
     /* Hiện lại Header để hiện tiêu đề khi gửi link */
     header {visibility: visible !important;}
     
@@ -157,6 +172,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
