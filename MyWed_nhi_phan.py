@@ -1,11 +1,4 @@
 import streamlit as st
-
-st.set_page_config(
-    page_title="Bộ Chuyển Đổi Số Phucking Official",
-    page_icon="🚀", # Bạn có thể thay bằng link ảnh .png của bạn
-    layout="wide"
-)
-
 # 1. CẤU HÌNH TRANG 
 st.set_page_config(
     page_title="PhucKing® - Bộ Chuyển Đổi Số", 
