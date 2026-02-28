@@ -167,8 +167,15 @@ st.sidebar.write("Chủ sở hữu: **Hoàng Phúc**")
 st.sidebar.info("Phiên bản độc quyền 2026")
 
 # 4. CHIA CÁC TAB
-tab1, tab2, tab3 = st.tabs(["➡️ Sang Nhị Phân", "⬅️ Sang Thập Phân", "🔠 Sang Chữ Cái"])
-
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
+    "🔢 Chuyển đổi", 
+    "📄 Văn bản", 
+    "💡 Giải mã", 
+    "➕ Cộng", 
+    "➖ Trừ",
+    "✖️ Nhân",
+    "➕ Chia"
+])
 with tab1:
         st.header("Đổi Số/Chữ sang Nhị Phân")
         with st.container(border=True):
@@ -410,6 +417,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
