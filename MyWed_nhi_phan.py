@@ -428,12 +428,17 @@ with tab7:
             v1, v2 = int(div1, 2), int(div2, 2)
             if v2 == 0: st.error("❌ Không thể chia cho số 0!")
             else:
-                st.success(f"✅ Thương (nhị phân): **{bin(v1//v2)[2:]}**")
-                st.info(f"🔢 Giá trị thập phân: {quotient} (dư {remainder})") 
+                quotient = v1 // v2
+                remainder = v1 % v2
+                st.success(f"✅ Thương (nhị phân): **{bin(quotient)[2:]}**")
+                
+                # Đây là dòng bạn đang thiếu:
+                st.info(f"🔢 Giá trị thập phân: {quotient} (dư {remainder})")
+                
                 if remainder > 0:
                     st.warning(f"🔸 Số dư (nhị phân): {bin(remainder)[2:]}")
         except ValueError:
-            st.error("❌ Lỗi: Chỉ được nhập 0 và 1!")
+            st.error("Lỗi: Chỉ được nhập 0 và 1!")
     st.markdown('</div>', unsafe_allow_html=True)
 
 # 5. CHÂN TRANG ĐỘC QUYỀN
@@ -451,6 +456,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
