@@ -1,23 +1,17 @@
 import streamlit as st
 
-# 1. CẤU HÌNH TRANG (Hiện Header để tạo uy tín)
-st.set_page_config(
+# 1. CẤU HÌNH TRANG 
     page_title="PhucKing® - Bộ Chuyển Đổi Số", 
     page_icon="🔢",
     layout="centered"
 )
 
-# 2. CSS TỔNG HỢP (Hiện Header, ẩn những thứ thừa)
+# 2. CSS TỔNG HỢP 
 st.markdown(
     """
     <style>
-    /* HIỆN Header để giữ Menu 3 gạch và tạo uy tín */
     header {visibility: visible !important;}
-    
-    /* ẨN dòng "Fork me on GitHub" và các nút xem code */
     .viewerBadge_container__1QSob, .stDeployButton {display: none !important;}
-    
-    /* ẨN Footer mặc định nhưng GIỮ LẠI Menu 3 gạch (#MainMenu) */
     footer {visibility: hidden;}
     #MainMenu {visibility: visible !important;}
 
@@ -172,6 +166,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
