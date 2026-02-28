@@ -10,27 +10,47 @@ st.set_page_config(
         'About': "# 👑 PhucKing® Premium Edition\nBản quyền thuộc về Hoàng Phúc © 2026"
     }
 )
+
 # 2. CSS TỔNG HỢP
-# 2. CSS TỔNG HỢP (Đã sửa để không ẩn)
 st.markdown(
     """
     <style>
-    /* Hiện lại Header để tạo uy tín ngay khi vào trang */
+    /* Hiện lại Header để hiện tiêu đề khi gửi link */
     header {visibility: visible !important;}
     
-    /* Chỉ ẩn những thứ thực sự không cần thiết như logo 'Made with Streamlit' */
+    /* Chỉ ẩn Footer và Menu Streamlit để web chuyên nghiệp hơn */
     footer {visibility: hidden;}
     #MainMenu {visibility: hidden;}
     .viewerBadge_container__1QSob {display: none !important;}
 
-    /* Giữ nguyên nền App tối chuyên nghiệp */
+    /* Nền App tối và hình nền chuyên nghiệp */
     .stApp {
         background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                     url("https://img.freepik.com/free-vector/abstract-binary-code-techno-background_1048-12836.jpg");
         background-size: cover;
         background-attachment: fixed;
     }
+
+    /* Khung nội dung chính */
+    .main .block-container {
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
     </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# --- THÔNG TIN ĐỂ HIỆN ẢNH XEM TRƯỚC KHI GỬI LINK ---
+st.markdown(
+    """
+    <head>
+        <meta property="og:title" content="PhucKing® - Bộ Chuyển Đổi Số Chính Thức">
+        <meta property="og:image" content="https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg">
+    </head>
     """,
     unsafe_allow_html=True
 )
@@ -152,6 +172,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
