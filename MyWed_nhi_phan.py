@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(
     page_title="PhucKing® - Bộ Chuyển Đổi Số", 
     page_icon="🔢",
-    initial_sidebar_state="expanded" # Dòng này giúp tự động nhảy vào Sidebar
+    initial_sidebar_state="expanded" # Tự động nhảy vào Sidebar
 )
 # 2. CSS TỔNG HỢP 
 st.markdown(
@@ -87,7 +87,7 @@ with st.sidebar:
     st.divider()
     st.markdown("### ☕ Ủng hộ dự án")
     
-    # Cho người dùng chọn mức tiền gợi ý
+    # Mức tiền gợi ý
     muc_donate = st.radio(
         "Chọn mức bạn muốn mời Phúc:",
         ["5.000 VNĐ", "10.000 VNĐ", "20.000 VNĐ", "Tùy tâm"],
@@ -95,15 +95,14 @@ with st.sidebar:
     )
 
     if st.button("Hiện mã QR Donate"):
-        # KIỂM TRA ĐIỀU KIỆN: Nếu chọn Tùy tâm
         if muc_donate == "Tùy tâm":
             st.toast("Mọi sự ủng hộ từ bạn đều là động lực lớn cho Phúc! ❤️")
-            loi_nhan = "Phúc cảm ơn tấm lòng tùy tâm của bạn rất nhiều!"
+            loi_nhan = "Để xem tâm bạn như nào nha^^❤️!"
         else:
             st.toast(f"Cảm ơn bạn đã chọn mức {muc_donate}! 💖")
             loi_nhan = f"Vui lòng nhập đúng {muc_donate} khi quét mã ZaloPay/Ngân hàng"
         
-        # Hiển thị ảnh QR từ link GitHub của bạn
+        # Hiển thị ảnh QR
         st.image(
             "https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg",
             caption=loi_nhan,
@@ -175,34 +174,4 @@ st.markdown(
     </div>
     """, 
     unsafe_allow_html=True
-
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
