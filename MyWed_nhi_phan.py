@@ -379,9 +379,9 @@ with tab5:
     st.header("➖ Trừ hai số Nhị phân")
     col1, col2 = st.columns(2)
     with col1:
-        bin_sub1 = st.text_input("Nhập số bị trừ:", value="1111", key="sub1")
+        bin_sub1 = st.text_input("Nhập số bị trừ(Nhị Phân):", value="1111", key="sub1")
     with col2:
-        bin_sub2 = st.text_input("Nhập số trừ:", value="1010", key="sub2")
+        bin_sub2 = st.text_input("Nhập số trừ(Nhị Phân):", value="1010", key="sub2")
     
     if st.button("Tính hiệu", use_container_width=True):
         try:
@@ -400,9 +400,9 @@ with tab6:
     st.header("✖️ Nhân hai số Nhị phân")
     c1, c2 = st.columns(2)
     with c1:
-        mul1 = st.text_input("Số thứ nhất:", value="101", key="mul1")
+        mul1 = st.text_input("Số thứ nhất(Nhị Phân):", value="101", key="mul1")
     with c2:
-        mul2 = st.text_input("Số thứ hai:", value="11", key="mul2")
+        mul2 = st.text_input("Số thứ hai(Nhị Phân):", value="11", key="mul2")
     
     if st.button("Tính tích", use_container_width=True):
         try:
@@ -419,9 +419,9 @@ with tab7:
     st.header("➕ Chia hai số Nhị phân")
     d1, d2 = st.columns(2)
     with d1:
-        div1 = st.text_input("Số bị chia:", value="1100", key="div1")
+        div1 = st.text_input("Số bị chia(Nhị Phân):", value="1100", key="div1")
     with d2:
-        div2 = st.text_input("Số chia:", value="10", key="div2")
+        div2 = st.text_input("Số chia(Nhị Phân):", value="10", key="div2")
     
     if st.button("Tính thương", use_container_width=True):
         try:
@@ -453,6 +453,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
