@@ -18,6 +18,7 @@ st.markdown(
         background-size: cover;
         background-attachment: fixed;
     }
+st.markdown(
     """
     <style>
     /* Hiện lại Header để hiện tiêu đề khi gửi link */
@@ -162,6 +163,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
