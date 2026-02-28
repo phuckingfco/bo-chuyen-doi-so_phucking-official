@@ -10,16 +10,24 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    header {visibility: visible !important;}
-    .viewerBadge_container__1QSob, .stDeployButton {display: none !important;}
-    footer {visibility: hidden;}
-    #MainMenu {visibility: visible !important;}
+    /* 1. HIỆN Header để giữ Menu 3 gạch nhưng làm Header trong suốt */
+    header {
+        visibility: visible !important;
+        background-color: rgba(0,0,0,0) !important;
+    }
 
-    /* Làm sạch Menu: Ẩn bớt các dòng "Report a bug" hay "View source" bên trong menu 3 gạch */
-    ul[data-testid="main-menu-list"] li:nth-child(2), 
-    ul[data-testid="main-menu-list"] li:nth-child(3) {
+    /* 2. ẨN TRIỆT ĐỂ dòng "Fork me on GitHub" và nút Deploy */
+    .viewerBadge_container__1QSob, 
+    .stDeployButton, 
+    [data-testid="stActionButtonIcon"] {
         display: none !important;
     }
+
+    /* 3. HIỆN Menu 3 gạch và ẩn các mục thừa bên trong */
+    #MainMenu {visibility: visible !important;}
+    
+    /* 4. ẨN Footer "Made with Streamlit" */
+    footer {visibility: hidden;}
     /* Hiện lại Header để hiện tiêu đề khi gửi link */
     header {visibility: visible !important;}
     
@@ -166,6 +174,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
