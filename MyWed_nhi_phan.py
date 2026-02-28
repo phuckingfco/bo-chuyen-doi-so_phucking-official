@@ -11,16 +11,6 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* 1. Ép toàn bộ nền App và Sidebar luôn theo phong cách Dark Mode */
-    .stApp {
-        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
-                    url("https://raw.githubusercontent.com/phuckingfco/binary-converter/main/z7232853078743_5002e1f2937a75093669037c322e7c09.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-    }
-st.markdown(
-    """
-    <style>
     /* Hiện lại Header để hiện tiêu đề khi gửi link */
     header {visibility: visible !important;}
     
@@ -163,6 +153,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
