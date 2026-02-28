@@ -56,8 +56,22 @@ st.sidebar.write("Chủ sở hữu: **Hoàng Phúc**")
 st.sidebar.info("Phiên bản độc quyền 2026")
 
 # Nút Donate
-if st.sidebar.button("☕ Mời tác giả ly cà phê"):
-    st.sidebar.write("Cảm ơn bạn đã ủng hộ PhucKing!")
+with st.sidebar:
+    st.divider()
+    st.markdown("### ☕ Ủng hộ PhucKing®")
+    
+    # Nút bấm để hiện mã QR
+    if st.button("Mời tác giả ly cà phê"):
+        st.info("Cảm ơn bạn đã ủng hộ dự án!")
+        
+        # Link donate
+        link_qr = "https://raw.githubusercontent.com/phuckingfco/bo-chuyen-doi-so_phucking-official/main/VCPank.jpg"
+        
+        st.image(link_qr, 
+                 caption="Quét mã để mời Hoàng Phúc ly cà phê nha",
+                 use_container_width=True)
+        
+        st.caption("Nội dung: [Ten cua ban] ung ho PhucKing")
 
 # 4. CHIA CÁC TAB
 tab1, tab2, tab3 = st.tabs(["➡️ Sang Nhị Phân", "⬅️ Sang Thập Phân", "🔠 Sang Chữ Cái"])
@@ -114,4 +128,5 @@ st.markdown(
     </div>
     """, 
     unsafe_allow_html=True
+
 )
