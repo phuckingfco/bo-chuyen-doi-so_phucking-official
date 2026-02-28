@@ -431,10 +431,7 @@ with tab7:
                 quotient = v1 // v2
                 remainder = v1 % v2
                 st.success(f"✅ Thương (nhị phân): **{bin(quotient)[2:]}**")
-                
-                # Đây là dòng bạn đang thiếu:
                 st.info(f"🔢 Giá trị thập phân: {quotient} (dư {remainder})")
-                
                 if remainder > 0:
                     st.warning(f"🔸 Số dư (nhị phân): {bin(remainder)[2:]}")
         except ValueError:
@@ -456,6 +453,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
