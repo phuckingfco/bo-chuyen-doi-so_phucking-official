@@ -168,9 +168,9 @@ st.sidebar.info("Phiên bản độc quyền 2026")
 
 # 4. CHIA CÁC TAB
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
-    "🔢 Chuyển đổi", 
+    "🔢 Nhị Phân", 
+    "💡 Số ", 
     "📄 Văn bản", 
-    "💡 Giải mã", 
     "➕ Cộng", 
     "➖ Trừ",
     "✖️ Nhân",
@@ -417,6 +417,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
