@@ -43,6 +43,18 @@ st.markdown(
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
     }
+        /* Màu chữ và bóng đổ */
+    h1, h2, h3, p, span, label {
+        color: #FFFFFF !important;
+        text-shadow: 1px 1px 3px black;
+    }
+
+    /* Tùy chỉnh ô nhập liệu */
+    .stTextInput input {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        border: 1px solid #4CAF50 !important;
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -141,6 +153,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
