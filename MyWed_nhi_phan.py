@@ -11,14 +11,29 @@ st.set_page_config(
     }
 )
 # 2. CSS TỔNG HỢP
+# 2. CSS TỔNG HỢP (Đã sửa để không ẩn)
 st.markdown(
     """
     <style>
-    /* Ẩn Menu ba gạch, Footer Streamlit và dòng Fork GitHub */
-    #MainMenu {visibility: hidden;}
+    /* Hiện lại Header để tạo uy tín ngay khi vào trang */
+    header {visibility: visible !important;}
+    
+    /* Chỉ ẩn những thứ thực sự không cần thiết như logo 'Made with Streamlit' */
     footer {visibility: hidden;}
-    header {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
     .viewerBadge_container__1QSob {display: none !important;}
+
+    /* Giữ nguyên nền App tối chuyên nghiệp */
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                    url("https://img.freepik.com/free-vector/abstract-binary-code-techno-background_1048-12836.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
     /* Nền App tối và hình nền chuyên nghiệp */
     .stApp {
@@ -137,6 +152,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
