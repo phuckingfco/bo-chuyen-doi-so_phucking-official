@@ -429,7 +429,9 @@ with tab7:
             if v2 == 0: st.error("❌ Không thể chia cho số 0!")
             else:
                 st.success(f"✅ Thương (nhị phân): **{bin(v1//v2)[2:]}**")
-                if v1%v2 > 0: st.warning(f"🔸 Số dư (nhị phân): {bin(v1%v2)[2:]}")
+                st.info(f"🔢 Giá trị thập phân: {quotient} (dư {remainder})") 
+                if remainder > 0:
+                    st.warning(f"🔸 Số dư (nhị phân): {bin(remainder)[2:]}")
         except ValueError:
             st.error("❌ Lỗi: Chỉ được nhập 0 và 1!")
     st.markdown('</div>', unsafe_allow_html=True)
@@ -449,6 +451,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
