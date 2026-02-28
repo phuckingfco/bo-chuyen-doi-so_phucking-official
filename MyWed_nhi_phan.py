@@ -10,15 +10,35 @@ st.set_page_config(
         'About': "# 👑 PhucKing® Premium Edition\nBản quyền thuộc về Hoàng Phúc © 2026"
     }
 )
-# 2. CSS TỔNG HỢP
 st.markdown(
     """
     <style>
-    /* Ẩn Menu ba gạch, Footer Streamlit và dòng Fork GitHub */
+    /* Chỉ ẩn nút Menu và logo Streamlit dư thừa, KHÔNG ẩn toàn bộ Header */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
     .viewerBadge_container__1QSob {display: none !important;}
+
+    /* Làm cho Header trong suốt để hiện nền đẹp ngay từ đầu */
+    header {
+        background-color: rgba(0,0,0,0) !important;
+    }
+    
+    /* Hiệu ứng hiện dần (Fade-in) cho toàn bộ trang để tăng tính thẩm mỹ */
+    .stApp {
+        animation: fadeIn 1.5s;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                    url("https://img.freepik.com/free-vector/abstract-binary-code-techno-background_1048-12836.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
     /* Nền App tối và hình nền chuyên nghiệp */
     .stApp {
@@ -137,4 +157,5 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
