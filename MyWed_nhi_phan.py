@@ -34,6 +34,7 @@ st.markdown(
         padding: 40px;
         border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
     }
     </style>
     """,
@@ -133,6 +134,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
