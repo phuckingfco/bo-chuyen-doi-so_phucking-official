@@ -314,6 +314,87 @@ with tab3:
             except Exception:
                 st.error("⚠️ Lỗi: Dãy nhị phân không đúng định dạng hoặc chứa ký tự lạ!")
 
+# --- TAB 4: CỘNG ---
+with tab4:
+    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    st.header("➕ Cộng hai số Nhị phân")
+    col1, col2 = st.columns(2)
+    with col1:
+        bin1 = st.text_input("Nhập số nhị phân thứ nhất:", value="1010", key="add1")
+    with col2:
+        bin2 = st.text_input("Nhập số nhị phân thứ hai:", value="1100", key="add2")
+    
+    if st.button("Tính tổng", use_container_width=True):
+        try:
+            sum_dec = int(bin1, 2) + int(bin2, 2)
+            sum_bin = bin(sum_dec)[2:]
+            st.success(f"✅ Kết quả nhị phân: **{sum_bin}**")
+            st.info(f"🔢 Giá trị thập phân: {sum_dec}")
+        except ValueError:
+            st.error("❌ Vui lòng chỉ nhập số 0 và 1!")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# --- TAB 5: TRỪ ---
+with tab5:
+    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    st.header("➖ Trừ hai số Nhị phân")
+    col1, col2 = st.columns(2)
+    with col1:
+        bin_sub1 = st.text_input("Nhập số bị trừ:", value="1111", key="sub1")
+    with col2:
+        bin_sub2 = st.text_input("Nhập số trừ:", value="1010", key="sub2")
+    
+    if st.button("Tính hiệu", use_container_width=True):
+        try:
+            val1, val2 = int(bin_sub1, 2), int(bin_sub2, 2)
+            sub_dec = val1 - val2
+            sub_bin = bin(sub_dec)[2:] if sub_dec >= 0 else "-" + bin(abs(sub_dec))[2:]
+            st.success(f"✅ Kết quả nhị phân: **{sub_bin}**")
+            st.info(f"🔢 Giá trị thập phân: {sub_dec}")
+        except ValueError:
+            st.error("❌ Vui lòng chỉ nhập số 0 và 1!")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# --- TAB 6: NHÂN ---
+with tab6:
+    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    st.header("✖️ Nhân hai số Nhị phân")
+    c1, c2 = st.columns(2)
+    with c1:
+        mul1 = st.text_input("Số thứ nhất:", value="101", key="mul1")
+    with c2:
+        mul2 = st.text_input("Số thứ hai:", value="11", key="mul2")
+    
+    if st.button("Tính tích", use_container_width=True):
+        try:
+            res_dec = int(mul1, 2) * int(mul2, 2)
+            st.success(f"✅ Kết quả nhị phân: **{bin(res_dec)[2:]}**")
+            st.info(f"🔢 Giá trị thập phân: {res_dec:,}")
+        except ValueError:
+            st.error("❌ Lỗi: Chỉ được nhập 0 và 1!")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# --- TAB 7: CHIA ---
+with tab7:
+    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    st.header("➕ Chia hai số Nhị phân")
+    d1, d2 = st.columns(2)
+    with d1:
+        div1 = st.text_input("Số bị chia:", value="1100", key="div1")
+    with d2:
+        div2 = st.text_input("Số chia:", value="10", key="div2")
+    
+    if st.button("Tính thương", use_container_width=True):
+        try:
+            v1, v2 = int(div1, 2), int(div2, 2)
+            if v2 == 0: st.error("❌ Không thể chia cho số 0!")
+            else:
+                st.success(f"✅ Thương (nhị phân): **{bin(v1//v2)[2:]}**")
+                if v1%v2 > 0: st.warning(f"🔸 Số dư (nhị phân): {bin(v1%v2)[2:]}")
+        except ValueError:
+            st.error("❌ Lỗi: Chỉ được nhập 0 và 1!")
+    st.markdown('</div>', unsafe_allow_html=True)
+
 # 5. CHÂN TRANG ĐỘC QUYỀN
 st.markdown("---")
 st.markdown(
@@ -329,5 +410,6 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
