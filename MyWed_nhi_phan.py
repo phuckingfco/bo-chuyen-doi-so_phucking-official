@@ -4,9 +4,8 @@ import streamlit as st
 st.set_page_config(
     page_title="PhucKing® - Bộ Chuyển Đổi Số", 
     page_icon="🔢",
-    initial_sidebar_state="expanded"  # Tự mở rộng Sidebar
+    initial_sidebar_state="expanded" # Dòng này giúp tự động nhảy vào Sidebar
 )
-
 # 2. CSS TỔNG HỢP 
 st.markdown(
     """
@@ -176,6 +175,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
