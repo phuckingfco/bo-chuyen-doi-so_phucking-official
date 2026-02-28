@@ -39,8 +39,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-    /* Khung nội dung chính */
-    .main .block-container {
+    main .block-container {
         background-color: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(10px);
         padding: 40px;
@@ -148,6 +147,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
